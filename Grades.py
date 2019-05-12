@@ -1,10 +1,16 @@
-sindhi = int(input('Mark Obtain in Sindhi: '))
-english = int(input('Mark Obtain in English: '))
-pakstd = int(input('Mark Obtain in Pakistan Studies: '))
-biologyTh = int(input('Mark Obtain in Biology Theory: '))
-biologyPr = int(input('Mark Obtain in Biology Practical: '))
-chemistryTh = int(input('Mark Obtain in Chemistry Theory: '))
-chemistryPr = int(input('Mark Obtain in Chemistry Practical: '))
+sindhi = int(input('Enter Marks Obtain in Sindhi (out of 75): '))
+urdu = int(input('Enter Marks Obtain in Urdu (out of 75): '))
+english1 = int(input('Enter Marks Obtain in English Paper 1 (out of 75): '))
+english2 = int(input('Enter Marks Obtain in English Paper 2 (out of 75): '))
+pakstd = int(input('Enter Mark Obtain in Pakistan Studies (out of 75): '))
+islamiat = int(input('Enter Mark Obtain in Islamiat (out of 75): '))
+maths = int(input('Enter Mark Obtain in Mathematics (out of 100): '))
+biologyTh = int(input('Enter Mark Obtain in Biology/Computer Studies Theory (out of 75): '))
+biologyPr = int(input('Enter Mark Obtain in Biology/Computer Studies Practical (out of 25): '))
+chemistryTh = int(input('Enter Mark Obtain in Chemistry Theory (out of 85): '))
+chemistryPr = int(input('Enter Mark Obtain in Chemistry Practical (out of 15): '))
+PhysicsTh = int(input('Enter Mark Obtain in Physics Theory (out of 85): '))
+PhysicsPr = int(input('Enter Mark Obtain in Physics Practical (out of 15): '))
 grade =''
 
 print('\n\t\t\t\tSTATEMENT OF MARKS')
@@ -15,13 +21,25 @@ if sindhi >= 25:
 else:
     status = 'FAIL'
     grade = 'F'
-print('SINDHI\t\t\t  075\t\t      025\t\t '+str(sindhi)+'\t  '+status)
-if english >= 25:
+print('SINDHI SALEES\t\t\t  075\t\t      025\t\t '+str(sindhi)+'\t  '+status)
+if urdu >= 25:
     status = 'PASS'
 else:
     status = 'FAIL'
     grade = 'F'
-print('ENGLISH\t\t\t  075\t\t      025\t\t '+str(english)+'\t  '+status)
+print('URDU NORMAL\t\t\t  075\t\t      025\t\t '+str(urdu)+'\t  '+status)
+if english1 >= 25:
+    status = 'PASS'
+else:
+    status = 'FAIL'
+    grade = 'F'
+print('ENGLISH PAPER 1\t\t\t  075\t\t      025\t\t '+str(english1)+'\t  '+status)
+if english2 >= 25:
+    status = 'PASS'
+else:
+    status = 'FAIL'
+    grade = 'F'
+print('ENGLISH PAPER 2\t\t\t  075\t\t      025\t\t '+str(english2)+'\t  '+status)
 if pakstd >= 25:
     status = 'PASS'
 else:
@@ -33,13 +51,13 @@ if biologyTh >= 28:
 else:
     status = 'FAIL'
     grade = 'F'
-print('BIOLOGY THEROY\t\t  085\t\t      028\t\t '+str(biologyTh)+'\t  '+status)
+print('BIOLOGY/COMPUTER STUDIES THEORY\t\t  085\t\t      028\t\t '+str(biologyTh)+'\t  '+status)
 if biologyPr >= 5:
     status = 'PASS'
 else:
     status = 'FAIL'
     grade = 'F'
-print('BIOLOGY PRACTICAL\t  015\t\t      005\t\t '+str(biologyPr)+'\t  '+status)
+print('BIOLOGY/COMPUTER STUDIES PRACTICAL\t  015\t\t      005\t\t '+str(biologyPr)+'\t  '+status)
 if chemistryTh >= 28:
     status = 'PASS'
 else:
@@ -54,7 +72,7 @@ else:
     grade = 'F'
 print('CHEMISTRY PRACTICAL\t  015\t\t      005\t\t '+str(chemistryPr)+'\t  '+status)
 
-totalMarksObt = sindhi + english + pakstd + biologyPr + biologyTh + chemistryPr + chemistryTh
+totalMarksObt = sindhi + english1 + pakstd + biologyPr + biologyTh + chemistryPr + chemistryTh
 percentageTotal = totalMarksObt / 425 * 100
 
 if grade != 'F':
